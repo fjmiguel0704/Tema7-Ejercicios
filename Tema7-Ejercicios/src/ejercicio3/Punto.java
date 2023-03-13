@@ -16,12 +16,16 @@ public class Punto {
 	}
 	
 	void setXY (int x, int y) {
-		x=x;
-		y=y;
+		this.x=x;
+		this.y=y;
 	}
 	
 	void desplaza (int dx, int dy) {
 		x+=dx;
 		y+=dy;
+	}
+	
+	void distancia (Punto p) {
+		System.out.println((p.x-this.x)+(p.y-this.y));
 	}
 }
