@@ -30,4 +30,10 @@ public class CuentaCorriente {
 		saldo+=cantidad;
 		return saldo;
 	}
+	
+	 public String toString () {
+		String informacion;
+		informacion = "DNI: " + DNI +"\n" + "Nombre completo: " + nombre + "\n" + "Saldo disponible: " + saldo;
+		return informacion;
+	}
 }
