@@ -7,8 +7,9 @@ public class Main {
 		Punto objeto2 = new Punto(7, -5);
 		
 		objeto1.desplaza(2, 5);
-		objeto1.imprime();
+		System.out.println(objeto1.imprime());
 		objeto1.distancia(objeto2);
+		System.out.println(objeto1.distancia(objeto2));
 	}
 
 }

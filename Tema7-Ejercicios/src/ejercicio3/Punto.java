@@ -11,8 +11,10 @@ public class Punto {
 		this.y=y;
 	}
 	
-	void imprime () {
-		System.out.println("(" + x + ", " + y + ")");
+	String imprime () {
+		String resultado;
+		resultado = "(" + x + ", " + y + ")";
+		return resultado;
 	}
 	
 	void setXY (int x, int y) {
@@ -25,7 +27,9 @@ public class Punto {
 		y+=dy;
 	}
 	
-	void distancia (Punto p) {
-		System.out.println((p.x-this.x)+(p.y-this.y));
+	double distancia (Punto p) {
+		double result;
+		result = Math.sqrt((Math.pow(p.x-this.x, 2))+(Math.pow(p.y-this.y, 2)));
+		return result;
 	}
 }
