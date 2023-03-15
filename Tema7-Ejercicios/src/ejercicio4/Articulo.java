@@ -31,4 +31,9 @@ public class Articulo {
 	double getPVP () {
 		return precio*=IVA;
 	}
+	
+	double getPVPDescuento (int descuento) {
+		precio = precio - (precio*descuento)/100;
+		return precio;
+	}
 }
