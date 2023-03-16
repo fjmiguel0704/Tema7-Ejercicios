@@ -9,13 +9,14 @@ public class Main {
 		
 		Scanner read = new Scanner (System.in);
 		
-		Articulo objeto = new Articulo("", 5.6, 9);
+		Articulo objeto = new Articulo("Keyboard", 5, 9);
 		
 		System.out.println("Introduce el descuento que desea aplicarle al artículo: ");
 		descuento=read.nextInt();
 		
 		objeto.getPVP();
 		objeto.getPVPDescuento(descuento);
+		System.out.println(objeto.imprime());
 
 	}
 

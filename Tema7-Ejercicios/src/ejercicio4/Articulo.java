@@ -3,7 +3,7 @@ package ejercicio4;
 public class Articulo {
 	String nombre;
 	double precio;
-	static final double IVA = 1.21;
+	static final int IVA = 21;
 	int cuantosQuedan;
 
 	public Articulo(String nombre, double precio, int cuantosQuedan) {
@@ -23,17 +23,18 @@ public class Articulo {
 
 	String imprime() {
 		String resultado;
-		resultado = "Nombre Artículo: " + nombre + "\n" + "Precio Artículo: " + precio + "\n" + "IVA: " + IVA + "\n"
+		resultado = "Nombre Artículo: " + nombre + "\n" + "Precio Artículo: " + precio + "€" + "\n" + "IVA: " + IVA + "%" + "\n"
 				+ "Disponibles: " + cuantosQuedan;
 		return resultado;
 	}
 	
 	double getPVP () {
-		return precio*=IVA;
+		precio = precio + ((precio*IVA)/100);
+		return precio;
 	}
 	
 	double getPVPDescuento (int descuento) {
-		precio = precio - (precio*descuento)/100;
+		precio = precio - ((precio*descuento)/100);
 		return precio;
 	}
 }
