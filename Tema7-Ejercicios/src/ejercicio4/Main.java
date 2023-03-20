@@ -11,12 +11,15 @@ public class Main {
 
 		Articulo objeto = new Articulo("Keyboard", 5, 9);
 
-		while (!objeto.nombre.equals(null) && objeto.precio != 0 && objeto.cuantosQuedan > 0) {
+		while (!objeto.nombre.isEmpty() && objeto.precio >0 && objeto.cuantosQuedan > 0) {
 			System.out.println("Introduce el descuento que desea aplicarle al artículo: ");
 			descuento = read.nextInt();
 			objeto.getPVP();
 			objeto.getPVPDescuento(descuento);
+			objeto.vender(5);
+			objeto.almacenar(2);
 			System.out.println(objeto.imprime());
+			break;
 		}
 
 	}

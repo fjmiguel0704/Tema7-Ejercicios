@@ -1,13 +1,13 @@
 package ejercicio4;
 
 public class Articulo {
-	String nombre;
+	String nombre = "";
 	double precio;
 	static final int IVA = 21;
 	int cuantosQuedan;
 
 	public Articulo(String nombre, double precio, int cuantosQuedan) {
-		if (nombre == null) {
+		if (nombre.isEmpty()) {
 			System.out.println("El nombre no es válido");
 		} else {
 			this.nombre = nombre;
@@ -41,5 +41,19 @@ public class Articulo {
 	double getPVPDescuento (int descuento) {
 		precio = precio - ((precio*descuento)/100);
 		return precio;
+	}
+	
+	boolean vender (int cantidad) {
+		boolean estado = false;
+		if (cuantosQuedan>=cantidad) {
+			estado = true;
+			cuantosQuedan-=cantidad;
+		}
+		
+		return estado;
+	}
+	
+	void almacenar (int cantidad) {
+		cuantosQuedan+=cantidad;
 	}
 }
